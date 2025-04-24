@@ -23,6 +23,7 @@
     --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
     --heading-color: #111111; /* Color for headings, subheadings and title throughout the website */
     --accent-color: #e03a3c; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --btn-color: #102E50;
     --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   }
@@ -254,7 +255,7 @@
   .header .btn-getstarted,
   .header .btn-getstarted:focus {
     color: var(--contrast-color);
-    background: var(--accent-color);
+    background: var(--btn-color);
     font-size: 14px;
     padding: 8px 25px;
     margin: 0 0 0 30px;
@@ -265,7 +266,7 @@
   .header .btn-getstarted:hover,
   .header .btn-getstarted:focus:hover {
     color: var(--contrast-color);
-    background: color-mix(in srgb, var(--accent-color), transparent 15%);
+    background: color-mix(in srgb, var(--btn-color), transparent 15%);
   }
   
   @media (max-width: 1200px) {
@@ -876,7 +877,7 @@
   
   .hero:before {
     content: "";
-    background: color-mix(in srgb, var(--background-color), transparent 30%);
+    /* background: color-mix(in srgb, var(--background-color), transparent 10%); */
     position: absolute;
     inset: 0;
     z-index: 2;
@@ -1592,7 +1593,7 @@
   .faq .faq-container .faq-item .faq-content {
     display: grid;
     grid-template-rows: 0fr;
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
     visibility: hidden;
     opacity: 0;
   }
@@ -2632,4 +2633,12 @@
     padding-left: 5px;
     color: color-mix(in srgb, var(--default-color), transparent 60%);
     font-size: 14px;
+  }
+
+  .faq-toggle {
+    transition: transform 0.3s ease;
+  }
+
+  .rotate-icon {
+    transform: rotate(90deg);
   }
